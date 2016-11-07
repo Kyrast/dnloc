@@ -1,2 +1,2 @@
-# dnloc-rev.
-reviving my old shitlord thing called Dungeons and Lines of Code
+# Reviving my old dust mite, Dungeons and Lines of Code
+i was bored.
