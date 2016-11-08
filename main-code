@@ -31,18 +31,14 @@ echo ûDungeons And Lines Of Codeû  -- heavy heavy heavvvyy alpha. --
 echo ûûûûûûûûûûûûûûû               
 echo.
 echo 1) Begin!
-echo 2) Load up a previous save. [Very Glitchy]
-echo 3) Exit.
-echo 4) Look at the update notes.
+echo 2) Exit.
+echo 3) Look at the update notes.
 echo. 
 set /p c=Choice: 
 if "!c!" == "1" goto new
-if "!c!" == "3" exit
-if "!c!" == "2" goto load
-if "!c!" == "4" goto notes
+if "!c!" == "2" exit
+if "!c!" == "3" goto notes
 goto menu 
-
-
 
 :new
 cls
