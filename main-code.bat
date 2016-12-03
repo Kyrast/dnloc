@@ -99,7 +99,7 @@ echo 4) Save the game.
 echo 5) Exit.
 echo.
 
-kif !slainm! == "5" (
+if !slainm! == "5" (
 set /a monster1hp=40
 set /a monster1dmg=10
 set /a goldearned=8
