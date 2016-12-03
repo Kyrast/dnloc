@@ -87,10 +87,9 @@ set battlemsg=Fight
 echo Welcome Home, !name!. Feel nice and cozy here.
 echo -----------------------------------------------------------------------------
 echo ------------------------------DNLOC made by Kyrast---------------------------
-echo -----------------------------------------------------------------------------
+echo ------------------------------Health: !hp! ---------------------------
 echo  Slain Monsters: !slainm!     Damage: %playerdmg%   Weapon: %weapon%
-echo.
-echo  Gold Coins: !gold!          EXP: !exp!/!exptill! Level: !level!
+echo.echo  Gold Coins: !gold!          EXP: !exp!/!exptill! Level: !level!   
 echo.
 echo Where would you like to travel?
 echo 1) Outside the village.
@@ -100,7 +99,7 @@ echo 4) Save the game.
 echo 5) Exit.
 echo.
 
-if !slainm! == "5" (
+kif !slainm! == "5" (
 set /a monster1hp=40
 set /a monster1dmg=10
 set /a goldearned=8
