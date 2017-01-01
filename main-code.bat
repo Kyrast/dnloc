@@ -86,7 +86,8 @@ set /a monster1hp=35
 set battlemsg=Fight
 echo Welcome Home, !name!. Feel nice and cozy here.
 echo -----------------------------------------------------------------------------
-echo ------------------------------DNLOC made by Kyrast---------------------------
+echo --------------------------------------------------------------------------
+
 echo ------------------------------Health: !hp! ---------------------------
 echo  Slain Monsters: !slainm!     Damage: %playerdmg%   Weapon: %weapon%
 echo.echo  Gold Coins: !gold!          EXP: !exp!/!exptill! Level: !level!   
