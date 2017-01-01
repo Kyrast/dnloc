@@ -27,7 +27,7 @@ echo           \./
 echo            `
 echo. 
 echo ûûûûûûûûûûûûûûû
-echo ûDungeons And Lines Of Codeû  -- heavy heavy heavvvyy alpha. --  
+echo ûDungeons And Lines Of Codeû
 echo ûûûûûûûûûûûûûûû               
 echo.
 echo 1) Begin!
