@@ -90,7 +90,7 @@ echo --------------------------------------------------------------------------
 
 echo ------------------------------Health: !hp! ---------------------------
 echo  Slain Monsters: !slainm!     Damage: %playerdmg%   Weapon: %weapon%
-echo.echo  Gold Coins: !gold!          EXP: !exp!/!exptill! Level: !level!   
+echo.  Gold Coins: !gold!          EXP: !exp!/!exptill! Level: !level!   
 echo.
 echo Where would you like to travel?
 echo 1) Outside the village.
@@ -404,4 +404,5 @@ echo.
 echo The miss system is unable to function
 echo.
 echo       PRESS ANY KEY TO CONTINUE
-pause >nul
+pause>nul
+goto home
