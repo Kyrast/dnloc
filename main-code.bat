@@ -27,7 +27,7 @@ echo           \./
 echo            `
 echo. 
 echo ûûûûûûûûûûûûûûû
-echo ûDungeons And Lines Of Codeû
+echo ûDungeons And dungeon lolû
 echo ûûûûûûûûûûûûûûû               
 echo.
 echo 1) Begin!
@@ -42,9 +42,9 @@ goto menu
 
 :new
 cls
-set hp=50
+set hp=55
 set monster1hp=35
-set playerdmg=1
+set playerdmg=4
 set monster1dmg=2
 set weapon=Fists
 set gold=0
@@ -401,7 +401,9 @@ goto home
 echo           Notes
 echo ------------------------------------
 echo.
-echo The miss system is unable to function
+echo finally dug this up
+echo changed hp, and fixed notes exiting game
+echo miss sys still dont work 
 echo.
 echo       PRESS ANY KEY TO CONTINUE
 pause>nul
