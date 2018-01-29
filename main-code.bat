@@ -1,5 +1,4 @@
 @echo off
-echo off
 cls
 TITLE Dungeons And Lines Of Code
 setlocal enabledelayedexpansion
@@ -26,9 +25,9 @@ echo         \  .  /
 echo           \./
 echo            `
 echo. 
-echo ûûûûûûûûûûûûûûû
+echo ûûûûûûûûûûûûûû
 echo ûDungeons And dungeon lolû
-echo ûûûûûûûûûûûûûûû               
+echo ûûûûûûûûûûûûûû               
 echo.
 echo 1) Begin!
 echo 2) Exit.
@@ -43,19 +42,17 @@ goto menu
 :new
 cls
 set hp=55
-set monster1hp=35
+set monster1hp=10
 set playerdmg=4
-set monster1dmg=2
+set monster1dmg=.5
 set weapon=Fists
 set gold=0
-set slainm=0
 set item1=Broadsword
 set item1price=15
 set item1damage=10
 set item2=Curved Bow
 set item2price=18
 set item2damage=11
-set storemsg=Ello there. Welcome to my shop.
 set item1priceminus1=9
 set item2priceminus1=10
 set location=Kasdred
@@ -67,7 +64,7 @@ set dmggain=3
 set battlemsg=Fight
 set floor=0
 set advmsg=On an adventure
-set healermsg=Ello' there. I can heal ye' for 8 gold! Would that be fine? Y/N 
+set healermsg=wanna get healed lol y/n
 set bossdmg=!random! * 10 / 32768
 set bosshp=!random! * 50 / 100
 set boss=1
@@ -82,7 +79,6 @@ set /p name=
 :home 
 cls 
 if !hp! lss 1 goto d-screen
-set /a monster1hp=35
 set battlemsg=Fight
 echo Welcome Home, !name!. Feel nice and cozy here.
 echo -----------------------------------------------------------------------------
@@ -100,11 +96,18 @@ echo 4) Save the game.
 echo 5) Exit.
 echo.
 
-if !slainm! == "5" (
+if !floor! lss "5" (
+set /a monster1hp=10
+
+if !floor! == "5" (
 set /a monster1hp=40
 set /a monster1dmg=10
 set /a goldearned=8
 )
+
+
+
+
 set /p i=Choice: 
 
 if "%i%" == "1" goto adventure
@@ -132,24 +135,9 @@ goto home
 )
 
 :purchase.item1
-set storemsg=Ello' there. Welcome to my shop. What'll it be?
+set storemsg=lele xd buy things xd 
 cls
-echo      ___________
-echo ._____l_______l_____.
-echo   ._____/  .  \____.
-echo       /   .   \
-echo      /    .    \
-echo     /     .     \
-echo    /      .      \
-echo   /       .       \
-echo  /        .        \
-echo .         .         .
-echo  \        .        /
-echo    \      .      /
-echo      \    .    /
-echo        \  .  /
-echo          \./
-echo           `
+
 echo Attributes: !item1! does 10 damage 
 echo This item costs !item1price! gold. Would you like to buy it? (Y/N)
 set /p s=Choice: 
@@ -222,7 +210,7 @@ if !hp! lss 1 goto d-screen
 goto enctr1
 
 :attack1
-set "q"=!random! * 10 / 32768
+set "q"=!random! %%% 3
 if !q! geq 7 (
 goto enctr1
 set /a playermissorhit=0
@@ -276,7 +264,7 @@ if "!l!" == "1" goto adv-chances
 if "!l!" == "2" goto home
 
 :adv-chances
-set /a chance=!random! * 4 / 32768 
+set /a chance=!random! %% 100
 if !chance! leq 2 (
 set /a floor+=1
 set advmsg=No enemies here
@@ -342,7 +330,7 @@ echo Current HP: !hp!
 set /p k=Choice: 
 if "!k!" == "y" (
 if !gold! lss 8 (
-set healermsg=You do not have enough money for me. Get out.
+set healermsg=ur broke kid get out
 pause 
 goto home
 )
@@ -382,10 +370,10 @@ if !hp! lss 1 goto d-screen
 goto enctr1
 
 :bosses
-if !boss! == "1" set bossname=Skeleton King
-if !boss! == "2" set bossname=The Giant
-if !boss! == "3" set bossname=Prime A.
-if !boss! == geq "4" set bossname=Rotting Corpse
+if !boss! == "1" set bossname=small man 
+if !boss! == "2" set bossname=slightly not smaller man 
+if !boss! == "3" set bossname=prime rib
+if !boss! == geq "4" set bossname=dead man
 goto afterboss
 
 :afterboss
