@@ -42,10 +42,10 @@ goto menu
 
 :new
 cls
-set hp=100
+set hp=50
 set monster1hp=35
-set playerdmg=7
-set monster1dmg=7
+set playerdmg=1
+set monster1dmg=2
 set weapon=Fists
 set gold=0
 set slainm=0
@@ -405,4 +405,4 @@ echo The miss system is unable to function
 echo.
 echo       PRESS ANY KEY TO CONTINUE
 pause>nul
-goto home
+goto menu
